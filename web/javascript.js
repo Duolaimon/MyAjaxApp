@@ -6,7 +6,7 @@ var autoRow;
 
 
 function doCompletion() {
-    var url = "autocomplete?action=complete&id=" + escape(completeField.value);
+    var url = "autocomplete?action=complete&id=" + encodeURI(completeField.value);
     req = initRequest();
     req.open("GET", url, true);
     req.onreadystatechange = callback;
